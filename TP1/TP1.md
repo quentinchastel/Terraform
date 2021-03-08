@@ -44,6 +44,11 @@ $ terraform apply
 Créez le fichier `topology.tf` dans le dossier du TP1 (attention, c'est important de respecter l'arborescence !) avec le contenu suivant : 
 
 ```tf
+variabe "user" {
+  type = string
+  default = "" # A renseigner avec votre nom d'utilisateur AWS
+}
+
 # Création d'une instance
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.ubuntu.id
