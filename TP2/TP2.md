@@ -31,7 +31,7 @@ Ouvrir le fichier topology.tf et y implementer les ressources décrites ci-desso
 
 Un subnet, s'appelant my_subnet, composé:
 * d'un attribut "availability_zone" avec la valeur: `eu-west-1a`
-* d'un attribut "cidr_block" avec la valeur: `10.0.1.0/24` # Si lors du lancement du code vous avez une erreur sur le cidr_block remplacez le "1" par un chiffre aléatoire inférieur à 254. Comme vous travaillez tous dans un même compte AWS il faut que chacun ai des chiffres différents. 
+* d'un attribut "cidr_block" avec la valeur: `10.0.1.0/24` # Si lors du lancement du code vous avez une erreur (The CIDR '10.0.X.0/24' conflicts with another subnet), remplacez le "1" par un chiffre aléatoire inférieur à 254. Comme vous travaillez tous dans un même compte AWS il faut que chacun ai un chiffre différent. 
 * d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221`
 * d’un tag "Name" valant : `votre user_id`
 * d’un tag "User" valant : `votre user_id`
