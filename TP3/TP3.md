@@ -28,7 +28,7 @@ Créez un fichier **variables.tf** avec les variables :
 * availability_zone_suffx
 
 Créez un fichier **terraform.tfvars** avec comme valeurs :
-* user valant `votre user_i``
+* user valant `votre user_id`
 * tp valant `TP3`
 * subnet_cidr_block valant `la valeur 10.0.X.0/24 que vous avez saisi`
 * availability_zone_suffix valant `a`
