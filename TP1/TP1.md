@@ -44,10 +44,6 @@ $ terraform apply
 Créez le fichier `topology.tf` dans le dossier du TP1 (attention, c'est important de respecter l'arborescence !) avec le contenu suivant : 
 
 ```tf
-variabe "user" {
-  type = string
-  default = "" # A renseigner avec votre nom d'utilisateur AWS
-}
 
 # Création d'une instance
 resource "aws_instance" "web" {
@@ -59,23 +55,6 @@ resource "aws_instance" "web" {
     Formation = "terraform"
     User      = var.user
   }
-}
-
-# Utilisation d'une ressource existante dans le Cloud
-data "aws_ami" "ubuntu" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["099720109477"]
 }
 
 ```
