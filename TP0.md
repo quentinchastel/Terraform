@@ -13,7 +13,8 @@ Utilisez l'aperçu pour avoir une version plus lisible
 
 Mac : `brew install terraform`
 
-Les autres, récupérez le binaire [terraform](https://www.terraform.io/downloads.html) à télécharger. 
+Les autres, commencez par vous acheter un mac... lol
+Plus sérieusement, récupérez le binaire [terraform](https://www.terraform.io/downloads.html) à télécharger. 
 
 Bien évidemment dans les commandes suivantes il est possible que le nom change en fonction de la version que vous avez téléchargé, faites donc attention.
 
