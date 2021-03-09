@@ -40,4 +40,5 @@ Vos credentials vous seront partagés si cela n'a pas déjà été fait.
 ```sh
 $ export AWS_ACCESS_KEY_ID=<votre_access_key>
 $ export AWS_SECRET_ACCESS_KEY=<votre_secret_key>
+$ export AWS_DEFAULT_REGION="eu-west-1"
 ```
