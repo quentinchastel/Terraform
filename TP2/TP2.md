@@ -27,55 +27,55 @@ Attention, la documentation commence par la partie datasource, dans ce tp nous u
 
 ## 2- Création de la topology
 
-Ouvrir le fichier topology.tf et y implementer les ressources décrites ci-dessous avec les informations suivantes:
+Ouvrir le fichier topology.tf et y implementer les ressources décrites ci-dessous à l'aide des éléments vus en cours avec les informations suivantes:
 
 Un subnet, s'appelant my_subnet, composé:
-* d'un attribut "availability_zone" avec la valeur: 
-* d'un attribut "cidr_block" avec la valeur: 
-* d'un attribut "vpc_id" avec la valeur: 
-* d’un tag "Name" valant : 
-* d’un tag "Formation" valant : 
-* d’un tag "User" valant :
+* d'un attribut "availability_zone" avec la valeur: `eu-west-1a`
+* d'un attribut "cidr_block" avec la valeur: `10.0.1.0/24` # Si lors du lancement du code vous avez une erreur sur le cidr_block remplacez le "1" par un chiffre aléatoire inférieur à 254. Comme vous travaillez tous dans un même compte AWS il faut que chacun ai des chiffres différents. 
+* d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221`
+* d’un tag "Name" valant : `votre user_id`
+* d’un tag "User" valant : `votre user_id`
+* d'un tag "TP" valant : `TP2`
 
 Un security group, s'appelant my_security_group, composé:
-* d'un attribut "name_prefix"  valant : 
-* d'un attribut "vpc_id" avec la valeur:
-* d’un tag "Name" valant :
-* d’un tag "Formation" valant :
-* d’un tag "User" valant :
+* d'un attribut "name_prefix"  valant : `votre user_id`
+* d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221`
+* d’un tag "Name" valant : `votre user_id`
+* d’un tag "User" valant : `votre user_id`
+* d'un tag "TP" valant : `TP2`
 
 Une règle de security group, s'appelant my_security_group_rule_out_http, composée:
-* d'un attribut "type" correspondant au flux sortant
-* d'un attribut "from_port" valant :
-* d'un attribut "to_port" valant :
-* d'un attribut "protocol" valant : 
-* d'un attribut "cidr_blocks" acceptant toutes les IPs
-* d'un attribut "security_group_id" correspondant à l’id du security group créé précédemment
+* d'un attribut "type" correspondant au flux sortant `egress`
+* d'un attribut "from_port" valant : `80`
+* d'un attribut "to_port" valant : `80`
+* d'un attribut "protocol" valant : `tcp`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs `O.O.O.O/O`
+* d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une règle de security group, s'appelant my_security_group_rule_out_https, composée:
-* d'un attribut "type" correspondant au flux sortant
-* d'un attribut "from_port" valant : 
-* d'un attribut "to_port" valant : 
-* d'un attribut "protocol" valant : 
-* d'un attribut "cidr_blocks" acceptant toutes les IPs
-* d'un attribut "security_group_id" correspondant à l’id du security group créé précédemment
+* d'un attribut "type" correspondant au flux sortant `egress`
+* d'un attribut "from_port" valant : `443`
+* d'un attribut "to_port" valant : `443`
+* d'un attribut "protocol" valant :  `tcp`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs  `O.O.O.O/O`
+* d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une règle de security group, s'appelant my_security_group_rule_http_in, composée:
-* d'un attribut "type" correspondant au flux entrant
-* d'un attribut "from_port" valant : 
-* d'un attribut "to_port" valant : 
-* d'un attribut "protocol" valant : 
-* d'un attribut "cidr_blocks" acceptant toutes les IPs
-* d'un attribut "security_group_id" correspondant à l’id du security group créé précédemment
+* d'un attribut "type" correspondant au flux entrant `ìngress`
+* d'un attribut "from_port" valant : `80`
+* d'un attribut "to_port" valant : `80`
+* d'un attribut "protocol" valant : `tcp`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs `O.O.O.O/O`
+* d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une instance, s'appelant my_instance, composée:
-* d'un attribut "ami" avec la valeur: 
-* d'un attribut "subnet_id" correspondant à l’id du subnet créé précédemment
-* d'un attribut "instance_type" valant: "t2.micro"
-* d'un attribut "vpc_security_group_ids" correspondant à l’id du security group créé précédemment
-* d’un tag "Name" valant :
-* d’un tag "Formation" valant :
-* d’un tag "User" valant :
+* d'un attribut "ami" avec la valeur: `ami-02297540444991cc0`
+* d'un attribut "subnet_id" correspondant à `l’id du subnet créé précédemment`
+* d'un attribut "instance_type" valant: `t2.micro`
+* d'un attribut "vpc_security_group_ids" correspondant à `l’id du security group créé précédemment`
+* d’un tag "Name" valant : `votre user_id`
+* d’un tag "User" valant : `votre user_id
+* d'un tag "TP" valant : `TP2`
 
 Vérifier/corriger la syntaxe terraform:
 ```bash
@@ -98,6 +98,15 @@ $ terraform apply
 ```
 
 Les ressources sont maintenant créées.
+Si tout s'est bien passé vous devriez avoir une VM accessible depuis internet sur le port 80, cependant vous ne connaissez pas l'adresse IP publique de cette VM afin d'y accéder pour voir s'il se passe quelque chose...
+
+A vous de jouer : 
+> Trouvez sur la doc Terraform le moyen d'afficher sur le terminal l'adresse IP publique d'une instance AWS créée en Terraform.
+
+Une vois que vous aurez trouver ce moyen, mettez-le en place et relancez la commande `terraform apply` afin de récupérer l'adresse IP.
+Ouvrez un onglet de votre navigateur et mettez-y l'adresse IP.
+
+> Que constatez-vous ? 
 
 ## 3- Un petit coup de ménage
 
