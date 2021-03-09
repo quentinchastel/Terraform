@@ -47,13 +47,13 @@ Créez le fichier `topology.tf` dans le dossier du TP1 (attention, c'est importa
 
 # Création d'une instance
 resource "aws_instance" "web" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = "t2.micro"                 # Taille de l'instance https://www.ec2instances.info/
+  ami                    = "ami-0e3f7a235a05f8e99"
+  instance_type          = "t2.micro"               
 
   tags = {
-    Name      = format("%s-instance", var.user)
+    Name      = var.user
     Formation = "terraform"
-    User      = var.user
+    TP        = "TP1"
   }
 }
 
@@ -69,6 +69,10 @@ Visualiser le plan d'exécution:
 ```bash
 $ terraform plan
 ```
+Vous l'aurez remarquer, comme vous n'avez pas renseigner la variable "user", il vous est demandé de la renseigné au moment du lancement de la commande.
+Renseignez-y la valeur qui vous a été fournie sous le format "nom.prenom" normalement.
+
+Vous aurez à faire la même chose dans la commande ci-dessous.
 
 Appliquer le plan d'exécution puis écrire "yes" sur l'input demandé par le terminal:
 ```bash
