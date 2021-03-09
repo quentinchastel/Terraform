@@ -37,6 +37,10 @@ Un subnet, s'appelant my_subnet, composé:
 * d’un tag "User" valant : `votre user_id`
 * d'un tag "TP" valant : `TP2`
 
+Une route table association s'appelant my_route_table_association, composée : 
+* d'un attribut "subnet_id" avec comme valeur : `l’id du subnet créé précédemment`
+* d'un attribut "route_table_id" avec comme valeur : `rtb-0418a191a893f8d1f`
+
 Un security group, s'appelant my_security_group, composé:
 * d'un attribut "name_prefix"  valant : `votre user_id`
 * d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221`
