@@ -78,7 +78,7 @@ Essayer d’utiliser la datasource suivante :
 
 Datasource:
 * Récupérer la dernière AMI ubuntu disponible sur AWS. (La Doc Terraform vous aidera)
-
+* Récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1` (remplacer ensuite cette valeur par cette datasource)
 
 ## 4- Un petit coup de ménage
 
