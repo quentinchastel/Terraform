@@ -73,6 +73,7 @@ Une instance, s'appelant my_instance, composée:
 * d'un attribut "subnet_id" correspondant à `l’id du subnet créé précédemment`
 * d'un attribut "instance_type" valant: `t2.micro`
 * d'un attribut "vpc_security_group_ids" correspondant à `l’id du security group créé précédemment`
+* d'un attribut "associate_public_ip_address" à : `true`
 * d’un tag "Name" valant : `votre user_id`
 * d’un tag "User" valant : `votre user_id
 * d'un tag "TP" valant : `TP2`
