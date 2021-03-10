@@ -37,6 +37,8 @@ Terraform v0.14.7
 Pour permettre à Terraform d'utiliser les apis d’AWS il faut évidemment renseigner des credentials.
 Vos credentials vous seront partagés si cela n'a pas déjà été fait. 
 
+Si vous êtes sur WINDOWS attendez le début du TP1 afin de configurer ces valeurs différemment car ça ne fonctionnera pas pour vous avec cette méthode. 
+
 ```sh
 $ export AWS_ACCESS_KEY_ID=<votre_access_key>
 $ export AWS_SECRET_ACCESS_KEY=<votre_secret_key>
