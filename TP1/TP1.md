@@ -59,7 +59,7 @@ resource "aws_instance" "web" {
 
 ```
 
-Si vous êtes sur WINDOWS ajoutez ceci au fichier `topology.tf` afin de pouvoir utiliser l'outil Terraform :
+Si vous êtes sur WINDOWS ajoutez ceci au fichier `topology.tf` déjà créé afin de pouvoir utiliser l'outil Terraform :
 
 ```tf 
 provider "aws" {
