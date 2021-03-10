@@ -41,7 +41,7 @@ $ terraform apply
 
 ## 2- Création de la Topology
 
-Créez le fichier `topology.tf` dans le dossier du TP1 (attention, c'est important de respecter l'arborescence !) avec le contenu suivant : 
+Créez le fichier `topology.tf` dans le dossier du TP1 (attention, c'est important de respecter l'arborescence !) avec le contenu suivant, en remplançant `var.user` par le user qui vous a été transmit sous le format `"nom.prenom"` : 
 
 ```tf
 
@@ -58,6 +58,17 @@ resource "aws_instance" "web" {
 }
 
 ```
+
+Si vous êtes sur WINDOWS ajoutez ceci au fichier `topology.tf` afin de pouvoir utiliser l'outil Terraform :
+
+```tf 
+provider "aws" {
+  region     = "eu-west-1"
+  access_key = "<id>"
+  secret_key = "<secret>"
+}
+```
+
 
 Une fois le tout renseigner, lancez succèssivement les commandes suivantes : 
 
@@ -84,6 +95,8 @@ Vous devriez voir le message :
 
 Bien joué si c'est le cas, vous venez de créer votre première instance AWS en Infra as Code ! PogU 
 
+N'hésitez pas à relancer la commande `terraform apply` afin de vérifier le concept d'Idempotence. Jetez un oeil au contenu du fichier `terraform.tfstate` également afin de voir ce qui s'y trouve.
+
 ## 3- Un petit coup de ménage pour finir
 
 Pour détruire votre topology plus qu'à lancer la commande suivante et écrire "yes" pour valider votre action :
@@ -95,5 +108,11 @@ $ terraform destroy
 
 Pour consulter le graphe votre topology et comprendre comment se font les liens entre vos ressources :
 ```bash
-$ terraform graph
+$ terraform graph -draw-cycles
+```
+
+Vous pouvez même en faire des images, grâce à la commande suivante : 
+
+```bash
+$ terraform graph | dot -Tsvg > graph.svg
 ```
