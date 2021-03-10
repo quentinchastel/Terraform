@@ -72,14 +72,14 @@ Une règle de security group, s'appelant my_security_group_rule_http_in, compos�
 * d'un attribut "cidr_blocks" acceptant toutes les IPs `O.O.O.O/O`
 * d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
-Une instance, s'appelant my_instance, composée:
+Une instance, s'appelant web, composée:
 * d'un attribut "ami" avec la valeur: `ami-02297540444991cc0`
 * d'un attribut "subnet_id" correspondant à `l’id du subnet créé précédemment`
 * d'un attribut "instance_type" valant: `t2.micro`
 * d'un attribut "vpc_security_group_ids" correspondant à `l’id du security group créé précédemment`
 * d'un attribut "associate_public_ip_address" à : `true`
 * d’un tag "Name" valant : `votre user_id`
-* d’un tag "User" valant : `votre user_id
+* d’un tag "User" valant : `votre user_id`
 * d'un tag "TP" valant : `TP2`
 
 Vérifier/corriger la syntaxe terraform:
