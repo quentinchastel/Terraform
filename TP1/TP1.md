@@ -111,7 +111,9 @@ Pour consulter le graphe votre topology et comprendre comment se font les liens 
 $ terraform graph -draw-cycles
 ```
 
-Vous pouvez même en faire des images, grâce à la commande suivante : 
+Vous pourrez ainsi savoir quels sont les liens entre les ressources.
+
+Vous pouvez également en faire des images, il faudra cependant installer l'outil `brew install graphviz` (https://graphviz.org/download/) puis utilisez la commande suivante : 
 
 ```bash
 $ terraform graph | dot -Tsvg > graph.svg
