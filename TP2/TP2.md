@@ -13,10 +13,10 @@ Utilisez l'aperçu pour avoir une version plus lisible
 ## 1- Objectifs détaillés
 
 Dans ce TP, nous allons déployer une Topologie composée de :
-* un subnet
-* un Security Group autorisant le port 80 en entrée
+* un subnet publique
+* une table de routage pour le subnet publique
+* un Security Group autorisant le port 80 et 443 en entrée puis 80 en sortie
 * une instance
-* un disque attaché à l’instance
 
 Nous allons donc utiliser différentes ressources aws.
 
