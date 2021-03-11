@@ -42,7 +42,7 @@ Créez un fichier **locals.tf** qui doit avoir les champs :
 * "availability_zone" valant la concaténation de `data.aws_region.current.name` et `var.availability_zone_suffix`
 
 Créez un fichier **output.tf** qui doit avoir les champs :
-* "instance_ip" valant `aws_instance.my_instance.public_ip`
+* "instance_ip" valant `aws_instance.web.public_ip`
 
 Remplacer maintenant dans le fichier **topology.tf** les valeurs suivantes par l’appels aux variables/datasource/locals que vous avez créées :
 * [local] availability_zone (dans la ressource aws_subnet) par la local : `availability_zone`
