@@ -53,7 +53,7 @@ Une règle de security group, s'appelant my_security_group_rule_out_http, compos
 * d'un attribut "from_port" valant : `80`
 * d'un attribut "to_port" valant : `80`
 * d'un attribut "protocol" valant : `tcp`
-* d'un attribut "cidr_blocks" acceptant toutes les IPs `O.O.O.O/O`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs `0.0.0.0/0`
 * d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une règle de security group, s'appelant my_security_group_rule_out_https, composée:
@@ -61,7 +61,7 @@ Une règle de security group, s'appelant my_security_group_rule_out_https, compo
 * d'un attribut "from_port" valant : `443`
 * d'un attribut "to_port" valant : `443`
 * d'un attribut "protocol" valant :  `tcp`
-* d'un attribut "cidr_blocks" acceptant toutes les IPs  `O.O.O.O/O`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs  `0.0.0.0/0`
 * d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une règle de security group, s'appelant my_security_group_rule_http_in, composée:
@@ -69,7 +69,7 @@ Une règle de security group, s'appelant my_security_group_rule_http_in, compos�
 * d'un attribut "from_port" valant : `80`
 * d'un attribut "to_port" valant : `80`
 * d'un attribut "protocol" valant : `tcp`
-* d'un attribut "cidr_blocks" acceptant toutes les IPs `O.O.O.O/O`
+* d'un attribut "cidr_blocks" acceptant toutes les IPs `0.0.0.0/0`
 * d'un attribut "security_group_id" correspondant à `l’id du security group créé précédemment`
 
 Une instance, s'appelant web, composée:
