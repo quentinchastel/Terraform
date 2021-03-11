@@ -27,7 +27,7 @@ Attention, la documentation commence par la partie datasource, dans ce tp nous u
 
 ## 2- Création de la topology
 
-Ouvrir le fichier topology.tf et y implementer les ressources décrites ci-dessous à l'aide des éléments vus en cours avec les informations suivantes:
+Créez le fichier topology.tf et y implementer les ressources décrites ci-dessous à l'aide des éléments vus en cours avec les informations suivantes:
 
 Un subnet, s'appelant my_subnet, composé:
 * d'un attribut "availability_zone" avec la valeur: `eu-west-1a`
