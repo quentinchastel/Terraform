@@ -76,7 +76,7 @@ Vous pouvez utiliser le mode console pour récupérer l’ip de l’instance :
 Exemple:
 ```bash
 $ terraform console
-> module.web.instance.public_ip
+> module.my_instance_module.web.public_ip
 172.32.2.14
 ```
 
