@@ -29,10 +29,22 @@ Attention, la documentation commence par la partie datasource, dans ce tp nous u
 
 Créez le fichier topology.tf et y implementer les ressources décrites ci-dessous à l'aide des éléments vus en cours avec les informations suivantes:
 
+Un vpc **(SI VOUS ETES SUR VOTRE PROPRE COMPTE AWS UNIQUEMENT)**, s'appelant my_vpc, composé : 
+* d'un attribut "cidr_block" avec la valeur `10.0.0.0/16`
+
+Une internet gateway **(SI VOUS ETES SUR VOTRE PROPRE COMPTE AWS UNIQUEMENT)**, s'appelant my_ig, composé : 
+* d'un attribut "vpc_id" avec comme valeur `l'id du vpc que vous venez de créé`
+
+Une route table **(SI VOUS ETES SUR VOTRE PROPRE COMPTE AWS UNIQUEMENT)**, s'appelant my_route_table, composé : 
+* d'un attribut "vpc_id" avec comme valeur `l'id du vpc que vous venez de créé`
+* d'un bloc "route" avec composé :
+    * d'un cidr_block valant `0.0.0.0/0`
+    * d'un gateway_id avec comme valeur `l'id de l'internet gateway que vous venez de créé`
+
 Un subnet, s'appelant my_subnet, composé:
 * d'un attribut "availability_zone" avec la valeur: `eu-west-1a`
 * d'un attribut "cidr_block" avec la valeur: `10.0.1.0/24` # Si lors du lancement du code vous avez une erreur (The CIDR '10.0.X.0/24' conflicts with another subnet), remplacez le "1" par un chiffre aléatoire inférieur à 254. Comme vous travaillez tous dans un même compte AWS il faut que chacun ai un chiffre différent. 
-* d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221`
+* d'un attribut "vpc_id" avec la valeur: `vpc-0856032ce82ce8221` (ou bien l'id du vpc que vous a créé au dessus si vous utilisez votre compte AWS)
 * d’un tag "Name" valant : `votre user_id`
 * d’un tag "User" valant : `votre user_id`
 * d'un tag "TP" valant : `TP2`
