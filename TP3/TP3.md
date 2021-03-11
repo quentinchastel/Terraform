@@ -19,7 +19,7 @@ Nous allons maintenant dans le TP 3:
 
 ## 2- Mise à jour de la topology
 
-Récupérez le contenu du fichier topology.tf que vous avez créé sur le TP1 afin d'y appliquer les changements suivants : 
+Récupérez le contenu du fichier topology.tf que vous avez créé sur le TP2 afin d'y appliquer les changements suivants : 
 
 Créez un fichier **variables.tf** avec les variables :
 * user
