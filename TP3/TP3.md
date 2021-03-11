@@ -34,7 +34,7 @@ Créez un fichier **terraform.tfvars** avec comme valeurs :
 * availability_zone_suffix valant `a`
 
 Créez un fichier **datasources.tf** qui doit avoir :
-* un datasource, s'appelant my_vpc, qui doit chercher un vpc filtré par:
+* un datasource, s'appelant my_vpc, qui doit chercher un vpc filtré par **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**:
   * l'id suivant : `vpc-0856032ce82ce8221`
 * un datasource, s'appelant `current`, qui doit chercher la région courante (sans filtre ou paramètre, car comportement par défaut)
 
@@ -78,7 +78,7 @@ Essayer d’utiliser la datasource suivante :
 
 Datasource:
 * Récupérer la dernière AMI ubuntu disponible sur AWS. (La Doc Terraform vous aidera)
-* Récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1` (remplacer ensuite cette valeur par cette datasource)
+* Récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1` (remplacer ensuite cette valeur par cette datasource: **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**) 
 
 ## 4- Un petit coup de ménage
 
