@@ -76,9 +76,9 @@ Vous devriez voir en Output l’ip de l’instance
 
 Essayer d’utiliser la datasource suivante :
 
-Datasource:
-* Récupérer la dernière AMI ubuntu disponible sur AWS. (La Doc Terraform vous aidera)
-* Récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1` (remplacer ensuite cette valeur par cette datasource: **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**) 
+Créez les datasources suivante :
+* Une "aws_ami" qui permet de récupérer la dernière AMI ubuntu disponible sur AWS. (La Doc Terraform de "aws_instance" vous aidera)
+* une "aws_route_table" qui permet de récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1` (remplacez ensuite cette valeur dans la "aws_route_table_association" que vous avez par cette datasource: **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**) 
 
 ## 4- Un petit coup de ménage
 
