@@ -78,7 +78,7 @@ Essayer d’utiliser la datasource suivante :
 
 Créez les datasources suivante :
 * Une "aws_ami" qui permet de récupérer la dernière AMI ubuntu disponible sur AWS. (La Doc Terraform de "aws_instance" vous aidera)
-* une "aws_route_table" qui permet de récupérer la route table qui porte l'ID : `rtb-0418a191a893f8d1f` (remplacez ensuite cette valeur dans la "aws_route_table_association" que vous avez par cette datasource: **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**) 
+* une "aws_route_table" qui permet de récupérer la route table qui porte l'ID, le champ sera "route_table_id" : `rtb-0418a191a893f8d1f` (remplacez ensuite cette valeur dans la "aws_route_table_association" que vous avez par cette datasource: **(UNIQUEMENT SI VOUS N'ETES PAS SUR VOTRE COMPTE AWS)**) 
 
 ## 4- Un petit coup de ménage
 
