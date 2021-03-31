@@ -70,7 +70,7 @@ $ terraform apply
 ### lifecycle
 
 Dans le fichier **topology.tf** :
- * Changer la datasource utilisée pour l'ami des machines par celle de centos
+ * Changer (si vous avez fait le bonus TP3) ou ajouter une datasource qui récupère la dernière AMI d'Ubuntu disponible (la doc terraform devrait vous aider). 
  * Faites un `plan` de l'infrastructure à créer
  * Modifier le code en utilisant les *lifecycle* pour ignorer les changements d'ami sur les instances
  * Vérifier avec le `plan` que les instances ne sont pas recréées
