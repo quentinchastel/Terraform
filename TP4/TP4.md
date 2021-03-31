@@ -105,6 +105,7 @@ Dans le fichier **topology.tf** :
  * Utiliser un *dynamic block* pour créer les règles d'ouverture de flux pour http et https dans le security group
 
 Valider la création du security group possédant les 2 règles.
+Attention je vous rappelle qu'on ne peut pas avoir les règles écrites directement dans le aws_security_group en ayant en même temps des ressources "aws_security_group_rule", vous devrez donc supprimer les "aws_security_group_rule" si vous en avez de votre code afin d'utiliser les règles en mode "inline".
 
 ## 3- Bonus
 
