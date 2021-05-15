@@ -70,7 +70,7 @@ provider "aws" {
 ```
 
 
-Une fois le tout renseigner, lancez succèssivement les commandes suivantes : 
+Une fois le tout renseigné, lancez succèssivement les commandes suivantes : 
 
 ```bash
 $ terraform fmt
