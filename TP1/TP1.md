@@ -76,6 +76,11 @@ Une fois le tout renseigné, lancez succèssivement les commandes suivantes :
 $ terraform fmt
 ```
 
+Initialiser le provider:
+```bash
+$ terraform init
+```
+
 Visualiser le plan d'exécution:
 ```bash
 $ terraform plan
